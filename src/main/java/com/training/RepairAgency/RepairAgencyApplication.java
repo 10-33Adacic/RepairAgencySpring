@@ -5,10 +5,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 
-public class RepAgencyApplication {
+public class RepairAgencyApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(RepAgencyApplication.class, args);
+        SpringApplication.run(RepairAgencyApplication.class, args);
     }
 
 }
