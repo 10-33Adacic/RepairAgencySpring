@@ -1,8 +1,6 @@
 package com.training.RepairAgency.entity;
 
-
 import lombok.*;
-
 import javax.persistence.*;
 
 @Getter

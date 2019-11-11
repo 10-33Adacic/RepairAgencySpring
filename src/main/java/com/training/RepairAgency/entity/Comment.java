@@ -1,10 +1,9 @@
 package com.training.RepairAgency.entity;
 
 import lombok.*;
-
-
 import javax.persistence.*;
 import java.time.LocalDate;
+
 @Builder
 @Getter
 @Setter
@@ -23,7 +22,7 @@ public class Comment {
 
     @ManyToOne()
     User user;
-
+//TODO: Delete this after test
 //    @OneToOne
    // Request request;
 }

@@ -3,7 +3,6 @@ package com.training.RepairAgency.dto;
 import com.training.RepairAgency.validation.UniqueEmail;
 import com.training.RepairAgency.validation.ValidName;
 import lombok.*;
-
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;

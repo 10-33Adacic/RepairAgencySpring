@@ -35,7 +35,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                         "/css/**",
                         "/img/**",
                         "/style.css").permitAll()
-                //.antMatchers("/admin/**").hasAnyRole("ADMIN")
                 .antMatchers("/user/**").hasAnyRole("USER", "MANAGER", "MASTER")
                 .antMatchers("/manager/**").hasAnyRole("MANAGER")
                 .antMatchers("/master/**").hasAnyRole("MASTER")

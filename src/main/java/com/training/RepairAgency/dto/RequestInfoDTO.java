@@ -10,10 +10,7 @@ import lombok.*;
 public class RequestInfoDTO {
 
     long id;
-
     String master;
-
     long price;
-
     String  reason;
 }

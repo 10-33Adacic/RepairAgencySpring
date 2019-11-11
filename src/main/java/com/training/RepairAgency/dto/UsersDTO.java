@@ -2,7 +2,6 @@ package com.training.RepairAgency.dto;
 
 import com.training.RepairAgency.entity.User;
 import lombok.*;
-
 import java.util.List;
 
 @Getter
