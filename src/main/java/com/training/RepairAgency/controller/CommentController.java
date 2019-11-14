@@ -29,8 +29,8 @@ public class CommentController {
 
     @PostMapping("/user/create_comment")
     public String createComment(@RequestParam("comment") String comment,
-                                @RequestParam(value = "error", required = false) String error,
-                                Model model) {
+                                @RequestParam(value = "error", required = false)
+                                        String error, Model model) {
         model.addAttribute("comment", comment);
         if (comment.isEmpty()) {
             model.addAttribute("error", error != null);

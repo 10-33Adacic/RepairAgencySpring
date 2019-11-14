@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class LoginController {
 
-    private UserService userService;
+    //TODO: Delete this if everything works ok
+//    private UserService userService;
 
     @RequestMapping("/login")
     public String getLogin(@RequestParam(value = "error", required = false) String error,

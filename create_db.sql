@@ -49,14 +49,14 @@ CREATE TABLE `comment` (
 ) 
 
 
-INSERT INTO `trucking`.`user` (`id`, `email`,  `first_name`,  `password`, `surname`) VALUES ('1', 'z@z.z', 'Masha','$2a$10$eR2BDVBw85T5yf.isbwUhu0GdPvTLdWnWpboAwnwVW1p9S8lA1kU.', 'Mushkina');
-INSERT INTO `trucking`.`user` (`id`, `email`,  `first_name`,  `password`, `surname`) VALUES ('2', 'master1@m', 'Dasha','$2a$10$eR2BDVBw85T5yf.isbwUhu0GdPvTLdWnWpboAwnwVW1p9S8lA1kU.', 'Mushkina');
-INSERT INTO `trucking`.`user` (`id`, `email`,  `first_name`,  `password`, `surname`) VALUES ('3', 'u@u.u', 'Vasiliy','$2a$10$eR2BDVBw85T5yf.isbwUhu0GdPvTLdWnWpboAwnwVW1p9S8lA1kU.', 'Mushkina');
+INSERT INTO `service_db`.`user` (`id`, `email`,  `first_name`,  `password`, `surname`) VALUES ('1', 'z@z.z', 'Masha','$2a$10$eR2BDVBw85T5yf.isbwUhu0GdPvTLdWnWpboAwnwVW1p9S8lA1kU.', 'Mushkina');
+INSERT INTO `service_db`.`user` (`id`, `email`,  `first_name`,  `password`, `surname`) VALUES ('2', 'master1@m', 'Dasha','$2a$10$eR2BDVBw85T5yf.isbwUhu0GdPvTLdWnWpboAwnwVW1p9S8lA1kU.', 'Mushkina');
+INSERT INTO `service_db`.`user` (`id`, `email`,  `first_name`,  `password`, `surname`) VALUES ('3', 'u@u.u', 'Vasiliy','$2a$10$eR2BDVBw85T5yf.isbwUhu0GdPvTLdWnWpboAwnwVW1p9S8lA1kU.', 'Mushkina');
 
-INSERT INTO `trucking`.`role` (`id`, `name`) VALUES ('1', 'ROLE_MANAGER');
-INSERT INTO `trucking`.`role` (`id`, `name`) VALUES ('2', 'ROLE_USER');
-INSERT INTO `trucking`.`role` (`id`, `name`) VALUES ('3', 'ROLE_MASTER');
+INSERT INTO `service_db`.`role` (`id`, `name`) VALUES ('1', 'ROLE_MANAGER');
+INSERT INTO `service_db`.`role` (`id`, `name`) VALUES ('2', 'ROLE_USER');
+INSERT INTO `service_db`.`role` (`id`, `name`) VALUES ('3', 'ROLE_MASTER');
 
-INSERT INTO `trucking`.`user_roles` (`user_id`, `role_id`) VALUES ('1', '1');
-INSERT INTO `trucking`.`user_roles` (`user_id`, `role_id`) VALUES ('2', '3');
-INSERT INTO `trucking`.`user_roles` (`user_id`, `role_id`) VALUES ('3', '2');
+INSERT INTO `service_db`.`user_roles` (`user_id`, `role_id`) VALUES ('1', '1');
+INSERT INTO `service_db`.`user_roles` (`user_id`, `role_id`) VALUES ('2', '3');
+INSERT INTO `service_db`.`user_roles` (`user_id`, `role_id`) VALUES ('3', '2');

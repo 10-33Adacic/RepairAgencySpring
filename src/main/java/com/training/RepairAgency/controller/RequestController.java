@@ -47,8 +47,11 @@ public class RequestController {
 
     @GetMapping("/user/all_requests")
     public String getAllRequestsPage(Model model, Pageable pageable) {
-        model.addAttribute("userRequest", requestService.getRequestsByCreator(SecurityContextHolder.getContext()
-                .getAuthentication().getName(),"rejected", pageable));
+        model.addAttribute("userRequest", requestService.getRequestsByCreator(SecurityContextHolder
+                .getContext()
+                .getAuthentication()
+                .getName(),
+                "rejected", pageable));
 
         requestService.getByCreatorAndStatus(
                 SecurityContextHolder.getContext()

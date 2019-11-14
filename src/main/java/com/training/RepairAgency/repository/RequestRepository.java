@@ -30,7 +30,7 @@ public interface RequestRepository extends JpaRepository<Request, Long> {
     void updateStatusAndReasonById(@Param("status") String status,
                           @Param("id") Long id, @Param("reason") String reason);
 
-    @Query(value = "SELECT r.* FROM trucking.request r INNER JOIN trucking.user u ON r.master_id=u.id " +
+    @Query(value = "SELECT r.* FROM service_db.request r INNER JOIN service_db.user u ON r.master_id=u.id " +
             "WHERE u.email=:email AND r.status=:status",
             nativeQuery = true)
     Page<Request> findByStatusAndEmail(@Param("email")String email,
