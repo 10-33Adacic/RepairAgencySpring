@@ -14,6 +14,8 @@
 </head>
 <body style="background-image: url(&quot;/assets/img/building.jpg&quot;); background-position: center;background-size: 150%;">
 <div style="margin-right: 80%">
+    <a class="btn"
+       href="http://localhost:8080/"><img src="/assets/img/home64.jpg" height="30px"></a>
     <button class="btn" type="button"
             value="uk"
             id="locales2"
@@ -71,11 +73,6 @@
         </div>
         <div class="form-group">
 
-            <!--<p th:field="*{role}">-->
-                <!--<input name="role" type="radio" selected value="ROLE_USER" >USER</input>-->
-                <!--<option selected value="ROLE_MASTER" >MASTER</option>-->
-                <!--<option selected value="ROLE_MANAGER" >MANAGER</option>-->
-            <!--</p>-->
             <select th:field="*{role}">
                 <option selected value="ROLE_USER" >USER</option>
                 <option selected value="ROLE_MASTER" >MASTER</option>
