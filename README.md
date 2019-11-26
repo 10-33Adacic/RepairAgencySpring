@@ -1,17 +1,11 @@
-***Project description:***
+**Project description:**
 
-Repair agency (**RepAgency**)
+**Repair agency**
 
-The web application is used for making communications between users, who make repairs, and masters, who repair user's devices.
+The web application is used for making communications between users, who make repairs, managers, who manage requests, and masters, who repair user's devices.
 
 **Set up instructions:**
 
-Download MySQL and MySQLWorkbanch 
-Download project from github 
-Run script "create_db.sql" in MySQLWorkbanch to install database
-
-**Launching instructions:**
-
-Open project in IDE 
-Set RepAgencyApplication configuration
-Build program
+1. Run script "create_db.sql" in MySQLWorkbanch to create database
+2. Open project in IDE 
+3. Build program
