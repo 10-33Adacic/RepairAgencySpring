@@ -1,6 +1,5 @@
 package com.training.RepairAgency.controller;
 
-import com.training.RepairAgency.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
