@@ -60,8 +60,6 @@
             <table class="table">
                 <thead>
                 <tr>
-<!--                    <th>Request</th>-->
-<!--                    <th>Status</th>-->
                     <th><a class="sorted" sd:pagination-sort="request">Request</a></th>
                     <th><a class="sorted" sd:pagination-sort="status" >Status</a></th>
                 </tr>
@@ -72,17 +70,10 @@
                     <tr>
                         <td th:text="${request.request}"></td>
                         <td th:text="${request.status}"></td>
-<!--                        <td>-->
-<!--                            <input id="reason"-->
-<!--                                   type="text"-->
-<!--                                   class="form-control"-->
-<!--                                   placeholder="Reason"/>-->
-<!--                        </td>-->
                         <td>
                             <a th:href="@{/manager/new_requests/accept?(id=${request.id})}">
                                 Accept
                             </a>
-<!--                            <a href="#formAccept" class="accept">Accept</a>-->
                             <a th:href="@{/manager/new_requests/reject?(id=${request.id})}">Reject</a>
                         </td>
                     </tr>
@@ -94,13 +85,9 @@
 
 
             <div  th:if="${newRequests!=null}" class="row">
-<!--                <div class="col-sm-6">-->
-<!--                    <div sd:pagination-summary="">info</div>-->
-<!--                </div>-->
                 <div class="col-sm-6">
                     <nav class="pull-right">
                         <ul class="pagination"  sd:pagination-split="6" sd:pagination="full">
-                            <!-- Pagination created by SpringDataDialect, this content is just for mockup -->
                             <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
                             <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
                         </ul>
@@ -135,22 +122,6 @@
     });
 </script>
 <script type="text/javascript">
-
-    // $(document).ready(function () {
-    //     $(".accept").magnificPopup();
-    //
-    // })
-
-    // $("#formAccept").submit(function (e)
-    // {
-    //     e.preventDefault;
-    //     $.ajax({
-    //         type:"POST",
-    //         url:"/manager/new_requests/accept}",
-    //         data:this.serialize()
-    //     });
-    //
-    // })
 </script>
 </body>
 
