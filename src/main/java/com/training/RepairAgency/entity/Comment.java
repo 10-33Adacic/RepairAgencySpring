@@ -22,7 +22,4 @@ public class Comment {
 
     @ManyToOne()
     User user;
-//TODO: Delete this after test
-//    @OneToOne
-   // Request request;
 }

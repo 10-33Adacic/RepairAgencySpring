@@ -22,8 +22,6 @@ public class CommentController {
 
     @GetMapping("/user/create_comment")
     public String getCreateRequestPage(Model model) {
-        //TODO: Delete this after test
-        //model.addAttribute("request", "");
         return "user-create-comment.html";
     }
 

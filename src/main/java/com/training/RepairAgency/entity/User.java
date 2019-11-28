@@ -27,7 +27,6 @@ public class User {
     private Boolean isBanned;
     private Boolean enabled;
 
-
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable
     private Collection<Role> roles;

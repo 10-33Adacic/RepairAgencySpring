@@ -35,7 +35,6 @@ public class UserService implements UserDetailsService {
         this.passwordEncoder = passwordEncoder;
     }
 
-
     public UsersDTO getAllUsers() {
         return new UsersDTO(userRepository.findAll());
     }
@@ -59,7 +58,6 @@ public class UserService implements UserDetailsService {
                     .roles(Arrays.asList(new Role(userDTO.getRole()))).build());
 
         } catch (Exception ex) {
-            //TODO: translate this
             log.info("{Почтовый адрес уже существует}");
             return false;
         }
@@ -73,7 +71,6 @@ public class UserService implements UserDetailsService {
             }
             userRepository.save(user);
         } catch (Exception ex) {
-            //TODO: translate this
             log.info("{Почтовый адрес уже существует}");
             return false;
         }

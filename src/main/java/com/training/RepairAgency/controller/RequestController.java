@@ -98,8 +98,7 @@ public class RequestController {
     @PostMapping(value = "/manager/new_requests/reject/req")
     public String makeRejected(RequestInfoDTO requestDto) {
 
-        requestService.updateStatusAndMasterById("rejected", requestDto.getId(), null,
-                requestDto.getReason(), 0L);
+        requestService.updateStatusAndMasterById("rejected", requestDto.getId(), null, requestDto.getReason(), 0L);
 
         return "redirect:/manager/new_requests";
     }

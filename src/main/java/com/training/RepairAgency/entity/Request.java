@@ -24,6 +24,4 @@ public class Request {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "master_id")
     User master;
-
-
 }

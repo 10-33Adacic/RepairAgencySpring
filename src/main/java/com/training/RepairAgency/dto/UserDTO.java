@@ -16,22 +16,22 @@ public class UserDTO {
 
     @NotNull(message = "{not.null}")
     @Email(message = "{email.valid}")
-    @Size(min = 5, max = 30, message = "{length.email}")
+    @Size(min = 5, max = 255, message = "{length.email}")
     @UniqueEmail
     private String email;
 
     @NotNull(message = "{not.null}")
     @ValidName
-    @Size(min = 2, max = 30, message = "{length.name}")
+    @Size(min = 2, max = 255, message = "{length.name}")
     private String name;
 
     @NotNull(message = "{not.null}")
-    @Size(min = 2, max = 30, message = "{length.surname}")
+    @Size(min = 2, max = 255, message = "{length.surname}")
     @ValidName
     private String surname;
 
     @NotNull(message = "{not.null}")
-    @Size(min = 5, max = 20, message = "{length.password}")
+    @Size(min = 5, max = 255, message = "{length.password}")
     private String password;
 
     @NotNull(message = "{not.null}")

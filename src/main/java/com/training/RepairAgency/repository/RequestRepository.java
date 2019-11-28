@@ -15,23 +15,26 @@ import java.util.Optional;
 public interface RequestRepository extends JpaRepository<Request, Long> {
     List<Request> findAll();
 
+    String UPDATE_STATIS_BY_ID = "UPDATE Request r SET r.status = :status WHERE r.id = :id";
+    String UPDATE_STATIS_AND_REASON_BY_ID = "UPDATE Request r SET r.status = :status, r.reason=:reason WHERE r.id = :id";
+    String FIND_BY_STATUS_AND_EMAIL = "SELECT r.* FROM service_db.request r INNER JOIN service_db.user u ON r.master_id=u.id WHERE u.email=:email AND r.status=:status";
+
     Optional<List<Request>> findByCreatorAndStatusNot(String creator, String status);
 
     Page<Request> findByStatus(String status, Pageable pageable);
 
     @Transactional
     @Modifying
-    @Query(value = "UPDATE Request r SET r.status = :status WHERE r.id = :id", nativeQuery = true)
+    @Query(value = UPDATE_STATIS_BY_ID, nativeQuery = true)
     void updateStatusById(@Param("status") String status,
                                    @Param("id") Long id);
     @Transactional
     @Modifying
-    @Query(value = "UPDATE Request r SET r.status = :status, r.reason=:reason WHERE r.id = :id", nativeQuery = true)
+    @Query(value = UPDATE_STATIS_AND_REASON_BY_ID, nativeQuery = true)
     void updateStatusAndReasonById(@Param("status") String status,
                           @Param("id") Long id, @Param("reason") String reason);
 
-    @Query(value = "SELECT r.* FROM service_db.request r INNER JOIN service_db.user u ON r.master_id=u.id " +
-            "WHERE u.email=:email AND r.status=:status",
+    @Query(value = FIND_BY_STATUS_AND_EMAIL,
             nativeQuery = true)
     Page<Request> findByStatusAndEmail(@Param("email")String email,
                                                  @Param("status") String status, Pageable pageable);
