@@ -9,6 +9,7 @@ import java.util.Collection;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+@EqualsAndHashCode(of = {"id"})
 @ToString
 @Entity
 @Table
