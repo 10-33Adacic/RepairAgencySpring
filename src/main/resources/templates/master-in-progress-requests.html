@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.w3.org/1999/xhtml"
+      xmlns:sd="http://www.w3.org/1999/xhtml"
+      xmlns:sec="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="utf-8">
@@ -28,7 +30,7 @@
                 </li>
                 <li class="nav-item"><a class="nav-link"
                                         href="/master/completed_requests"
-                                        th:text="#{in.progress.requests}"></a>
+                                        th:text="#{completed.requests}"></a>
                 </li>
             </ul>
             <span class="navbar-text actions"> <a class="login" th:href="@{/logout}" th:text="#{nav.logout}"></a></span>
@@ -85,7 +87,7 @@
         </div>
     </div>
 </div>
-<div  th:if="${newRequests!=null}" class="row">
+<div  th:if="${inProgressRequests!=null}" class="row">
     <div class="col-sm-6">
         <nav class="pull-right">
             <ul class="pagination" sd:pagination="full" sd:pagination-split="6">
