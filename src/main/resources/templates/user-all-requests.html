@@ -63,9 +63,9 @@
             <table class="table">
                 <thead>
                 <tr>
-                    <th>Request</th>
-                    <th>Status</th>
-                    <th>Price</th>
+                    <th th:text="#{msg.request}"></th>
+                    <th th:text="#{msg.status}"></th>
+                    <th th:text="#{msg.price}"></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -106,16 +106,15 @@
             <table class="table">
                 <thead>
                 <tr>
-                    <th>Request</th>
-                    <th>Status</th>
-                    <th>Rejection reason<br/>
-                        (if status is rejected)
+                    <th th:text="#{msg.request}"></th>
+                    <th th:text="#{msg.status}"></th>
+                    <th th:text="#{msg.rejection.reason}">
                     </th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr th:each="user: ${rejectedRequests}">
-                    <td th:text="${user.request} "></td>
+                    <td th:text="${user.request}"></td>
                     <td th:text="${user.status}"></td>
                     <td th:text="${user.reason}"></td>
                 </tr>
