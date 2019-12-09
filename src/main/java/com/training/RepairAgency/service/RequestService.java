@@ -50,7 +50,7 @@ public class RequestService {
                 .<Page<RequestDTO>>map(requests -> new PageImpl<>(requests.stream()
                 .map(this::buildRequest)
                 .collect(Collectors.toList())))
-                .orElseThrow(RuntimeException::new);
+                .orElse(null);
     }
 
     private RequestDTO buildRequest(Request r) {
